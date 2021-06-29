@@ -30,6 +30,7 @@ import {
 export default function properties({ navigation }) {
   /*Constants*/
   const [modalOpen, setModalOpen] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
   const [rentals, setRental] = useState([]);
   const [user, setUser] = useState("");
   const [number, setNumber] = useState(0);
@@ -165,6 +166,25 @@ export default function properties({ navigation }) {
         </TouchableWithoutFeedback>
       </Modal>
 
+      {/*menu options*/}
+      <Modal visible={modal2Open} animationType="slide">
+        <View>
+          <MaterialIcons
+            name="close"
+            size={24}
+            style={{ ...styles.modalToggle, ...styles.modalClose }}
+            onPress={() => setModal2Open(false)}
+          />
+          <Button
+            //style={styles.button}
+            title="Logout"
+            color="maroon"
+            onPress={() => console.log("logout")}
+          />
+          {/*<Options />*/}
+        </View>
+      </Modal>
+
       <MaterialIcons
         name="add"
         size={24}
@@ -192,6 +212,12 @@ export default function properties({ navigation }) {
           />
         </View>
       </View>
+      <MaterialIcons
+        name="menu-open"
+        size={24}
+        style={styles.modal2Toggle}
+        onPress={() => setModal2Open(true)}
+      />
     </View>
   );
 }
@@ -231,6 +257,16 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     alignSelf: "center",
+  },
+  modal2Toggle: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: "#f2f2f2",
+    padding: 10,
+    borderRadius: 10,
+    alignSelf: "baseline",
   },
   modalClose: {
     marginTop: 20,
