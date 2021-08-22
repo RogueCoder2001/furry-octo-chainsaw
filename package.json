@@ -1,9 +1,8 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "web": "expo start --web",
     "eject": "expo eject"
   },
@@ -21,6 +20,7 @@
     "expo-linking": "^2.3.1",
     "expo-splash-screen": "^0.11.2",
     "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.5.4",
     "expo-web-browser": "^9.2.0",
     "formik": "^2.2.9",
     "graphql": "^15.5.1",
@@ -28,7 +28,7 @@
     "moment": "^2.29.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "react-native": "~0.63.4",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-google-places-autocomplete": "^2.2.0",
     "react-native-pager-view": "^5.3.2",
@@ -38,6 +38,7 @@
     "react-native-screens": "~3.0.0",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-tab-view": "^3.0.1",
+    "react-native-unimodules": "~0.13.3",
     "react-native-user-avatar": "^1.0.7",
     "react-native-web": "~0.13.12",
     "react-navigation": "^4.4.4",
@@ -49,5 +50,7 @@
     "@types/react-native": "~0.63.2",
     "typescript": "~4.0.0"
   },
-  "private": true
+  "private": true,
+  "name": "furry-octo-chainsaw",
+  "version": "1.0.0"
 }
